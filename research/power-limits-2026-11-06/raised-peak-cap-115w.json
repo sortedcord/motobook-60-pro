@@ -1,0 +1,250 @@
+{
+  "stage": "raised-peak-cap-115w",
+  "started": "2026-11-06T09:30:20.869488+05:30",
+  "limits_before": {
+    "intel-rapl:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "115000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    },
+    "intel-rapl:1": {
+      "constraint_1_time_window_us": "976",
+      "constraint_1_power_limit_uw": "95000000",
+      "constraint_0_time_window_us": "9994240",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "90000000",
+      "constraint_0_name": "long_term"
+    },
+    "intel-rapl-mmio:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "115000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    }
+  },
+  "workload": "matrix",
+  "rows": [
+    {
+      "seconds": 0.5,
+      "watts": {
+        "intel-rapl:0": 62.42,
+        "intel-rapl:1": 81.24,
+        "intel-rapl-mmio:0": 62.26
+      },
+      "max_cpu_c": 84.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88113800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        }
+      },
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 1.0,
+      "watts": {
+        "intel-rapl:0": 62.47,
+        "intel-rapl:1": 80.41,
+        "intel-rapl-mmio:0": 62.47
+      },
+      "max_cpu_c": 90.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88153800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88113800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        }
+      },
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 1.5,
+      "watts": {
+        "intel-rapl:0": 62.75,
+        "intel-rapl:1": 81.55,
+        "intel-rapl-mmio:0": 62.75
+      },
+      "max_cpu_c": 90.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x880f3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        }
+      },
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 2.01,
+      "watts": {
+        "intel-rapl:0": 62.32,
+        "intel-rapl:1": 80.8,
+        "intel-rapl-mmio:0": 62.32
+      },
+      "max_cpu_c": 90.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88153800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x880f3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        }
+      },
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 2.51,
+      "watts": {
+        "intel-rapl:0": 63.03,
+        "intel-rapl:1": 81.8,
+        "intel-rapl-mmio:0": 63.03
+      },
+      "max_cpu_c": 90.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x880d3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        }
+      },
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 3.01,
+      "watts": {
+        "intel-rapl:0": 61.97,
+        "intel-rapl:1": 80.58,
+        "intel-rapl-mmio:0": 61.97
+      },
+      "max_cpu_c": 92.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x880d3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88243800"
+        }
+      },
+      "cpu0_max_khz": 4900000
+    }
+  ],
+  "stopped_reason": "92 C temperature cutoff",
+  "limits_after": {
+    "intel-rapl:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "115000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    },
+    "intel-rapl:1": {
+      "constraint_1_time_window_us": "976",
+      "constraint_1_power_limit_uw": "95000000",
+      "constraint_0_time_window_us": "9994240",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "90000000",
+      "constraint_0_name": "long_term"
+    },
+    "intel-rapl-mmio:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "115000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    }
+  },
+  "peak_half_second_w": 63.03,
+  "mean_w": 62.49
+}

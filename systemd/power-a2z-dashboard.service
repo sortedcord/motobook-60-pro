@@ -1,0 +1,13 @@
+[Unit]
+Description=Power a2z local dashboard
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Projects/system/power_a2z
+ExecStart=/usr/bin/python3 %h/Projects/system/power_a2z/dashboard/server.py --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=default.target

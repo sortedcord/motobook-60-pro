@@ -1,0 +1,15 @@
+[Unit]
+Description=Read Motobook fan RPM for the power-a2z collector
+ConditionPathExists=/sys/class/dmi/id/product_name
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/lib/power-a2z/motobook-fan-speed --output /run/power-a2z/fan.json
+RuntimeDirectory=power-a2z
+RuntimeDirectoryMode=0755
+RuntimeDirectoryPreserve=yes
+UMask=0022
+TimeoutStartSec=8
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/run/power-a2z /run/lock

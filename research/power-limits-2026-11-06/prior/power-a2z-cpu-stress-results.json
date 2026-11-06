@@ -1,0 +1,242 @@
+[
+  {
+    "seconds": 0.0,
+    "cpu_c": 52.0,
+    "cpu_package_w": 7.524655727457743,
+    "platform_psys_w": 13.734303743735936,
+    "power_timestamp": "2026-11-06T03:49:09.556868+00:00",
+    "fan_rpm": 1953
+  },
+  {
+    "seconds": 2.0,
+    "cpu_c": 64.0,
+    "cpu_package_w": 7.524655727457743,
+    "platform_psys_w": 13.734303743735936,
+    "power_timestamp": "2026-11-06T03:49:09.556868+00:00",
+    "fan_rpm": 1953
+  },
+  {
+    "seconds": 4.0,
+    "cpu_c": 65.0,
+    "cpu_package_w": 7.524655727457743,
+    "platform_psys_w": 13.734303743735936,
+    "power_timestamp": "2026-11-06T03:49:09.556868+00:00",
+    "fan_rpm": 1953
+  },
+  {
+    "seconds": 6.0,
+    "cpu_c": 66.0,
+    "cpu_package_w": 7.524655727457743,
+    "platform_psys_w": 13.734303743735936,
+    "power_timestamp": "2026-11-06T03:49:09.556868+00:00",
+    "fan_rpm": 1953
+  },
+  {
+    "seconds": 8.0,
+    "cpu_c": 67.0,
+    "cpu_package_w": 7.524655727457743,
+    "platform_psys_w": 13.734303743735936,
+    "power_timestamp": "2026-11-06T03:49:09.556868+00:00",
+    "fan_rpm": 1953
+  },
+  {
+    "seconds": 10.0,
+    "cpu_c": 68.0,
+    "cpu_package_w": 28.33994601846457,
+    "platform_psys_w": 37.93753970635181,
+    "power_timestamp": "2026-11-06T03:49:20.663815+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 12.0,
+    "cpu_c": 69.0,
+    "cpu_package_w": 28.33994601846457,
+    "platform_psys_w": 37.93753970635181,
+    "power_timestamp": "2026-11-06T03:49:20.663815+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 14.0,
+    "cpu_c": 68.0,
+    "cpu_package_w": 28.33994601846457,
+    "platform_psys_w": 37.93753970635181,
+    "power_timestamp": "2026-11-06T03:49:20.663815+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 16.0,
+    "cpu_c": 69.0,
+    "cpu_package_w": 28.33994601846457,
+    "platform_psys_w": 37.93753970635181,
+    "power_timestamp": "2026-11-06T03:49:20.663815+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 18.0,
+    "cpu_c": 70.0,
+    "cpu_package_w": 28.33994601846457,
+    "platform_psys_w": 37.93753970635181,
+    "power_timestamp": "2026-11-06T03:49:20.663815+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 20.0,
+    "cpu_c": 70.0,
+    "cpu_package_w": 28.33994601846457,
+    "platform_psys_w": 37.93753970635181,
+    "power_timestamp": "2026-11-06T03:49:20.663815+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 22.1,
+    "cpu_c": 72.0,
+    "cpu_package_w": 30.3659868865135,
+    "platform_psys_w": 40.26237052765471,
+    "power_timestamp": "2026-11-06T03:49:31.591789+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 24.1,
+    "cpu_c": 72.0,
+    "cpu_package_w": 30.3659868865135,
+    "platform_psys_w": 40.26237052765471,
+    "power_timestamp": "2026-11-06T03:49:31.591789+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 26.1,
+    "cpu_c": 72.0,
+    "cpu_package_w": 30.3659868865135,
+    "platform_psys_w": 40.26237052765471,
+    "power_timestamp": "2026-11-06T03:49:31.591789+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 28.1,
+    "cpu_c": 70.0,
+    "cpu_package_w": 30.3659868865135,
+    "platform_psys_w": 40.26237052765471,
+    "power_timestamp": "2026-11-06T03:49:31.591789+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 30.1,
+    "cpu_c": 72.0,
+    "cpu_package_w": 30.3659868865135,
+    "platform_psys_w": 40.26237052765471,
+    "power_timestamp": "2026-11-06T03:49:31.591789+00:00",
+    "fan_rpm": 1956
+  },
+  {
+    "seconds": 32.1,
+    "cpu_c": 72.0,
+    "cpu_package_w": 31.163183615337747,
+    "platform_psys_w": 41.35022416589438,
+    "power_timestamp": "2026-11-06T03:49:42.598231+00:00",
+    "fan_rpm": 2095
+  },
+  {
+    "seconds": 34.1,
+    "cpu_c": 72.0,
+    "cpu_package_w": 31.163183615337747,
+    "platform_psys_w": 41.35022416589438,
+    "power_timestamp": "2026-11-06T03:49:42.598231+00:00",
+    "fan_rpm": 2095
+  },
+  {
+    "seconds": 36.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.163183615337747,
+    "platform_psys_w": 41.35022416589438,
+    "power_timestamp": "2026-11-06T03:49:42.598231+00:00",
+    "fan_rpm": 2095
+  },
+  {
+    "seconds": 38.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.163183615337747,
+    "platform_psys_w": 41.35022416589438,
+    "power_timestamp": "2026-11-06T03:49:42.598231+00:00",
+    "fan_rpm": 2095
+  },
+  {
+    "seconds": 40.1,
+    "cpu_c": 73.0,
+    "cpu_package_w": 31.163183615337747,
+    "platform_psys_w": 41.35022416589438,
+    "power_timestamp": "2026-11-06T03:49:42.598231+00:00",
+    "fan_rpm": 2095
+  },
+  {
+    "seconds": 42.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.163183615337747,
+    "platform_psys_w": 41.35022416589438,
+    "power_timestamp": "2026-11-06T03:49:42.598231+00:00",
+    "fan_rpm": 2095
+  },
+  {
+    "seconds": 44.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.281619194145478,
+    "platform_psys_w": 41.40223800622197,
+    "power_timestamp": "2026-11-06T03:49:53.595997+00:00",
+    "fan_rpm": 2099
+  },
+  {
+    "seconds": 46.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.281619194145478,
+    "platform_psys_w": 41.40223800622197,
+    "power_timestamp": "2026-11-06T03:49:53.595997+00:00",
+    "fan_rpm": 2099
+  },
+  {
+    "seconds": 48.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.281619194145478,
+    "platform_psys_w": 41.40223800622197,
+    "power_timestamp": "2026-11-06T03:49:53.595997+00:00",
+    "fan_rpm": 2099
+  },
+  {
+    "seconds": 50.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.281619194145478,
+    "platform_psys_w": 41.40223800622197,
+    "power_timestamp": "2026-11-06T03:49:53.595997+00:00",
+    "fan_rpm": 2099
+  },
+  {
+    "seconds": 52.1,
+    "cpu_c": 74.0,
+    "cpu_package_w": 31.281619194145478,
+    "platform_psys_w": 41.40223800622197,
+    "power_timestamp": "2026-11-06T03:49:53.595997+00:00",
+    "fan_rpm": 2099
+  },
+  {
+    "seconds": 54.1,
+    "cpu_c": 76.0,
+    "cpu_package_w": 31.194747743996224,
+    "platform_psys_w": 41.336825810563184,
+    "power_timestamp": "2026-11-06T03:50:04.585511+00:00",
+    "fan_rpm": 2097
+  },
+  {
+    "seconds": 56.1,
+    "cpu_c": 75.0,
+    "cpu_package_w": 31.194747743996224,
+    "platform_psys_w": 41.336825810563184,
+    "power_timestamp": "2026-11-06T03:50:04.585511+00:00",
+    "fan_rpm": 2097
+  },
+  {
+    "seconds": 58.1,
+    "cpu_c": 75.0,
+    "cpu_package_w": 31.194747743996224,
+    "platform_psys_w": 41.336825810563184,
+    "power_timestamp": "2026-11-06T03:50:04.585511+00:00",
+    "fan_rpm": 2097
+  }
+]

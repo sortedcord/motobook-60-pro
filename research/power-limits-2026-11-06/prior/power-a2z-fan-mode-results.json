@@ -1,0 +1,334 @@
+[
+  {
+    "label": "Automatic baseline",
+    "samples": [
+      {
+        "rpm": 3307,
+        "cpu_c": 63.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 1649,
+        "cpu_c": 64.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 0,
+        "cpu_c": 64.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 15
+      },
+      {
+        "rpm": 0,
+        "cpu_c": 70.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 20
+      },
+      {
+        "rpm": 0,
+        "cpu_c": 66.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 25
+      }
+    ]
+  },
+  {
+    "label": "Fan mode 1: standard",
+    "samples": [
+      {
+        "rpm": 0,
+        "cpu_c": 72.0,
+        "fan_mode": "1",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 0,
+        "cpu_c": 71.0,
+        "fan_mode": "1",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 0,
+        "cpu_c": 71.0,
+        "fan_mode": "1",
+        "profile": "performance",
+        "seconds": 15
+      },
+      {
+        "rpm": 0,
+        "cpu_c": 68.0,
+        "fan_mode": "1",
+        "profile": "performance",
+        "seconds": 20
+      },
+      {
+        "rpm": 0,
+        "cpu_c": 78.0,
+        "fan_mode": "1",
+        "profile": "performance",
+        "seconds": 25
+      }
+    ]
+  },
+  {
+    "label": "Fan mode 4: efficient",
+    "samples": [
+      {
+        "rpm": 0,
+        "cpu_c": 75.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 1624,
+        "cpu_c": 73.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 1940,
+        "cpu_c": 71.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 15
+      },
+      {
+        "rpm": 2089,
+        "cpu_c": 68.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 20
+      },
+      {
+        "rpm": 2109,
+        "cpu_c": 75.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 25
+      }
+    ]
+  },
+  {
+    "label": "Fan mode 0: silent",
+    "samples": [
+      {
+        "rpm": 2097,
+        "cpu_c": 68.0,
+        "fan_mode": "0",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 2105,
+        "cpu_c": 71.0,
+        "fan_mode": "0",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 2091,
+        "cpu_c": 75.0,
+        "fan_mode": "0",
+        "profile": "performance",
+        "seconds": 15
+      },
+      {
+        "rpm": 2109,
+        "cpu_c": 71.0,
+        "fan_mode": "0",
+        "profile": "performance",
+        "seconds": 20
+      }
+    ]
+  },
+  {
+    "label": "Fan mode 2: dust cleaning",
+    "samples": [
+      {
+        "rpm": 2105,
+        "cpu_c": 74.0,
+        "fan_mode": "2",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 2087,
+        "cpu_c": 78.0,
+        "fan_mode": "2",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 2091,
+        "cpu_c": 73.0,
+        "fan_mode": "2",
+        "profile": "performance",
+        "seconds": 15
+      }
+    ]
+  },
+  {
+    "label": "Profile low-power",
+    "samples": [
+      {
+        "rpm": 2103,
+        "cpu_c": 54.0,
+        "fan_mode": "4",
+        "profile": "low-power",
+        "seconds": 5
+      },
+      {
+        "rpm": 2113,
+        "cpu_c": 54.0,
+        "fan_mode": "4",
+        "profile": "low-power",
+        "seconds": 10
+      },
+      {
+        "rpm": 2103,
+        "cpu_c": 52.0,
+        "fan_mode": "4",
+        "profile": "low-power",
+        "seconds": 15
+      },
+      {
+        "rpm": 2105,
+        "cpu_c": 52.0,
+        "fan_mode": "4",
+        "profile": "low-power",
+        "seconds": 20
+      },
+      {
+        "rpm": 2103,
+        "cpu_c": 51.0,
+        "fan_mode": "4",
+        "profile": "low-power",
+        "seconds": 25
+      }
+    ]
+  },
+  {
+    "label": "Profile balanced",
+    "samples": [
+      {
+        "rpm": 1946,
+        "cpu_c": 70.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 1933,
+        "cpu_c": 67.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 1958,
+        "cpu_c": 67.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 15
+      },
+      {
+        "rpm": 1962,
+        "cpu_c": 69.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 20
+      },
+      {
+        "rpm": 1940,
+        "cpu_c": 67.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 25
+      }
+    ]
+  },
+  {
+    "label": "Profile performance",
+    "samples": [
+      {
+        "rpm": 1962,
+        "cpu_c": 68.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 1933,
+        "cpu_c": 72.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 1954,
+        "cpu_c": 68.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 15
+      },
+      {
+        "rpm": 1939,
+        "cpu_c": 72.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 20
+      },
+      {
+        "rpm": 1960,
+        "cpu_c": 67.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 25
+      }
+    ]
+  },
+  {
+    "label": "Restored maximum target",
+    "samples": [
+      {
+        "rpm": 3438,
+        "cpu_c": 72.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 5
+      },
+      {
+        "rpm": 4347,
+        "cpu_c": 70.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 10
+      },
+      {
+        "rpm": 4338,
+        "cpu_c": 58.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 15
+      },
+      {
+        "rpm": 4338,
+        "cpu_c": 56.0,
+        "fan_mode": "4",
+        "profile": "performance",
+        "seconds": 20
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[Unit]
+Description=Sample RAPL power every 10 seconds
+
+[Timer]
+OnBootSec=5s
+OnUnitActiveSec=10s
+AccuracySec=1s
+Unit=power-a2z-power.service
+
+[Install]
+WantedBy=timers.target

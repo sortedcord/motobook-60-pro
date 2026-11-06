@@ -1,0 +1,15 @@
+#!/bin/sh
+# Install a root-owned copy: the system service never executes user-writable code.
+set -eu
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Run: sudo $0" >&2
+    exit 1
+fi
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+install -d -o root -g root -m 0755 /usr/local/lib/power-a2z
+install -o root -g root -m 0755 "$project_dir/motobook-fan-speed" /usr/local/lib/power-a2z/motobook-fan-speed
+install -o root -g root -m 0644 "$project_dir/systemd/power-a2z-fan.service" /etc/systemd/system/power-a2z-fan.service
+install -o root -g root -m 0644 "$project_dir/systemd/power-a2z-fan.timer" /etc/systemd/system/power-a2z-fan.timer
+systemctl daemon-reload
+systemctl enable --now power-a2z-fan.timer
+systemctl start power-a2z-fan.service

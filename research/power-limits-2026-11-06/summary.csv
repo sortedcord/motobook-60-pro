@@ -1,0 +1,17 @@
+stage,started,workload,duration_s,mean_cpu_w,max_cpu_c,stop_reason,mean_psys_w,mean_battery_w,peak_cpu_w,measurement_interval_s
+baseline,2026-11-06T09:28:00.172310+05:30,avx2-fma,10.08,19.69,58.0,completed,27.86,,20.83,0.5
+max-fan-original-policy,2026-11-06T09:28:23.007708+05:30,matrix,10.07,29.14,64.0,completed,39.81,,31.08,0.5
+thermald-stopped,2026-11-06T09:28:35.188948+05:30,matrix,15.1,30.14,64.0,completed,42.21,,31.97,0.5
+thermald-nonadaptive,2026-11-06T09:28:50.382074+05:30,matrix,15.1,30.1,64.0,completed,42.09,,31.88,0.5
+raised-package-and-platform-caps,2026-11-06T09:29:13.280960+05:30,matrix,15.11,30.24,63.0,completed,41.57,,31.4,0.5
+raised-peak-cap-80w,2026-11-06T09:29:28.457863+05:30,matrix,15.1,38.75,72.0,completed,53.51,,40.76,0.5
+raised-peak-cap-100w,2026-11-06T09:30:05.712725+05:30,matrix,15.09,51.12,86.0,completed,67.06,,53.55,0.5
+raised-peak-cap-115w,2026-11-06T09:30:20.869488+05:30,matrix,3.01,62.49,92.0,92 C temperature cutoff,81.06,,63.03,0.5
+oem-geek-mode,2026-11-06T09:31:11.878088+05:30,matrix,18.11,30.54,64.0,completed,41.97,,31.81,0.5
+raised-peak-cap-125w,2026-11-06T09:32:27.281140+05:30,matrix,12.06,65.52,88.0,completed,84.57,19.17,66.91,0.5
+raised-peak-cap-130w,2026-11-06T09:32:39.408847+05:30,matrix,10.55,68.69,98.0,98 C temperature cutoff,88.84,27.65,69.89,0.5
+raised-peak-cap-135w,2026-11-06T09:33:46.267048+05:30,matrix,17.08,71.79,98.0,98 C temperature cutoff,92.44,28.0,73.18,0.5
+daily-original-budget-pl4-100w,2026-11-06T09:34:45.530811+05:30,matrix,45.27,44.14,92.0,completed,57.52,0.32,46.73,0.5
+installed-boost-verification,2026-11-06T09:39:15.356186+05:30,matrix,8.03,71.44,92.0,completed,92.05,21.76,72.82,0.5
+final-100w-attempt,2026-11-06T09:48:19.574392+05:30,matrix,6.081,89.8,100.0,98 C temperature cutoff,114.76,36.14,96.22,0.25
+final-100w-no-software-cutoff,2026-11-06T09:49:25.117580+05:30,matrix,20.171,94.24,104.0,20-second window complete,120.81,55.49,102.01,0.25

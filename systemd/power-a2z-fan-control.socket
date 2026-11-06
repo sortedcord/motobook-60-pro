@@ -1,0 +1,11 @@
+[Unit]
+Description=Local fan-control socket for power-a2z
+
+[Socket]
+ListenStream=/run/power-a2z-fan-control.sock
+SocketMode=0600
+SocketUser=sortedcord
+SocketGroup=sortedcord
+
+[Install]
+WantedBy=sockets.target

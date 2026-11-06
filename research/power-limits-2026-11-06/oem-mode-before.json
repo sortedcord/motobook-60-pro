@@ -1,0 +1,14 @@
+{
+  "get": "0x8012b01",
+  "ext": "0xf001",
+  "caps": {
+    "/sys/class/powercap/intel-rapl:1/constraint_1_power_limit_uw": "58000000",
+    "/sys/class/powercap/intel-rapl:1/constraint_0_power_limit_uw": "56000000",
+    "/sys/class/powercap/intel-rapl:0/constraint_2_power_limit_uw": "61000000",
+    "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": "80000000",
+    "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": "50000000",
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": "61000000",
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": "65000000",
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": "55000000"
+  }
+}

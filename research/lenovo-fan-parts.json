@@ -1,0 +1,290 @@
+{
+  "83NY": [
+    {
+      "id": "5F10S14427",
+      "name": "Thermal Fan 83HS DWPH",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal Fan H83HS DWPH",
+          "description": "",
+          "loisDescription": "Thermal Fan 83HS DWPH"
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_A.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_B.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_box.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_details.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_label.jpg"
+      ],
+      "substitutes": [
+        {
+          "type": "E",
+          "id": "5F10S14204",
+          "products": []
+        },
+        {
+          "type": "E",
+          "id": "5F10S14203",
+          "products": []
+        }
+      ],
+      "products": [],
+      "specs": null
+    },
+    {
+      "id": "5F10S14204",
+      "name": "Thermal Fan 83J0",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal Fan H 83J0_FCN",
+          "description": "",
+          "loisDescription": "Thermal Fan 83J0"
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_A.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_B.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_box.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_details.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_label.jpg"
+      ],
+      "substitutes": [
+        {
+          "type": "E",
+          "id": "5F10S14427",
+          "products": []
+        },
+        {
+          "type": "E",
+          "id": "5F10S14203",
+          "products": []
+        }
+      ],
+      "products": [],
+      "specs": null
+    },
+    {
+      "id": "5F10S14203",
+      "name": "Thermal Fan 83J0",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal Fan H 83J0_HY",
+          "description": "",
+          "loisDescription": "Thermal Fan 83J0"
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14203/1.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/2.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/3.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/4.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/5.jpg"
+      ],
+      "substitutes": [
+        {
+          "type": "E",
+          "id": "5F10S14427",
+          "products": []
+        },
+        {
+          "type": "E",
+          "id": "5F10S14204",
+          "products": []
+        }
+      ],
+      "products": [
+        "83HR",
+        "83HS",
+        "83HT",
+        "83HU",
+        "83HV",
+        "83HW",
+        "83HX",
+        "83HY",
+        "83J0",
+        "83J1",
+        "83J7",
+        "83NC",
+        "83ND",
+        "83NY",
+        "83QG",
+        "83QH",
+        "83V6",
+        "83V7"
+      ],
+      "specs": null
+    }
+  ],
+  "83NC": [
+    {
+      "id": "5F10S14427",
+      "name": "Thermal Fan 83HS DWPH",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal Fan H83HS DWPH",
+          "description": "",
+          "loisDescription": "Thermal Fan 83HS DWPH"
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_A.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_B.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_box.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_details.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14427/5F10S14427_label.jpg"
+      ],
+      "substitutes": [
+        {
+          "type": "E",
+          "id": "5F10S14204",
+          "products": []
+        },
+        {
+          "type": "E",
+          "id": "5F10S14203",
+          "products": []
+        }
+      ],
+      "products": [],
+      "specs": null
+    },
+    {
+      "id": "5F10S14204",
+      "name": "Thermal Fan 83J0",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal Fan H 83J0_FCN",
+          "description": "",
+          "loisDescription": "Thermal Fan 83J0"
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_A.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_B.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_box.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_details.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14204/5F10S14204_label.jpg"
+      ],
+      "substitutes": [
+        {
+          "type": "E",
+          "id": "5F10S14427",
+          "products": []
+        },
+        {
+          "type": "E",
+          "id": "5F10S14203",
+          "products": []
+        }
+      ],
+      "products": [],
+      "specs": null
+    },
+    {
+      "id": "5F10S14203",
+      "name": "Thermal Fan 83J0",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal Fan H 83J0_HY",
+          "description": "",
+          "loisDescription": "Thermal Fan 83J0"
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14203/1.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/2.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/3.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/4.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14203/5.jpg"
+      ],
+      "substitutes": [
+        {
+          "type": "E",
+          "id": "5F10S14427",
+          "products": []
+        },
+        {
+          "type": "E",
+          "id": "5F10S14204",
+          "products": []
+        }
+      ],
+      "products": [
+        "83HR",
+        "83HS",
+        "83HT",
+        "83HU",
+        "83HV",
+        "83HW",
+        "83HX",
+        "83HY",
+        "83J0",
+        "83J1",
+        "83J7",
+        "83NC",
+        "83ND",
+        "83NY",
+        "83QG",
+        "83QH",
+        "83V6",
+        "83V7"
+      ],
+      "specs": null
+    }
+  ],
+  "83JK": [
+    {
+      "id": "5F10S14230",
+      "name": "Thermal module w/Fan C 83JK PK",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal module w/Fan C 83JK PK",
+          "description": "",
+          "loisDescription": ""
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14230/5F10S14230_A.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14230/5F10S14230_B.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14230/5F10S14230_box.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14230/5F10S14230_details.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14230/5F10S14230_label.jpg"
+      ],
+      "substitutes": [],
+      "products": [],
+      "specs": null
+    },
+    {
+      "id": "5F10S14231",
+      "name": "Thermal module w/Fan C 83JK AVC",
+      "localizations": [
+        {
+          "language": "en",
+          "name": "Thermal module w/Fan C 83JK AVC",
+          "description": "",
+          "loisDescription": ""
+        }
+      ],
+      "imageUrls": [
+        "https://download.lenovo.com/Images/Parts/5F10S14231/5F10S14231_A.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14231/5F10S14231_B.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14231/5F10S14231_box.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14231/5F10S14231_details.jpg",
+        "https://download.lenovo.com/Images/Parts/5F10S14231/5F10S14231_label.jpg"
+      ],
+      "substitutes": [],
+      "products": [
+        "83JK"
+      ],
+      "specs": null
+    }
+  ]
+}

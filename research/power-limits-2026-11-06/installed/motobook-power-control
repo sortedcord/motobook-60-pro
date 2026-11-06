@@ -1,0 +1,190 @@
+#!/usr/bin/env python3
+"""Bounded AC performance policy and temporary boost for MOTOROLA 83NY/SFCN07WW."""
+import argparse
+import contextlib
+import fcntl
+import json
+import os
+from pathlib import Path
+import signal
+import subprocess
+import time
+
+POWERCAP = Path('/sys/class/powercap')
+PEAK = POWERCAP / 'intel-rapl:0/constraint_2_power_limit_uw'
+STOCK_PEAK = 61_000_000
+DAILY_PEAK = 100_000_000
+LOCK = '/run/lock/motobook-power-control.lock'
+FAN = Path('/usr/local/lib/power-a2z/motobook-fan-control')
+
+
+def validate():
+    if os.geteuid() != 0:
+        raise RuntimeError('Run with sudo')
+    identity = tuple((Path('/sys/class/dmi/id') / key).read_text().strip()
+                     for key in ('sys_vendor', 'product_name', 'bios_version'))
+    if identity != ('MOTOROLA', '83NY', 'SFCN07WW'):
+        raise RuntimeError('Verified only for MOTOROLA 83NY, BIOS SFCN07WW')
+
+
+def temperature():
+    readings = [int(f.read_text()) / 1000
+                for h in Path('/sys/class/hwmon').glob('hwmon*')
+                if (h / 'name').read_text().strip() == 'coretemp'
+                for f in h.glob('temp*_input')]
+    if not readings:
+        raise RuntimeError('CPU temperature unavailable')
+    return max(readings)
+
+
+def ac_online():
+    return Path('/sys/class/power_supply/ADP1/online').read_text().strip() == '1'
+
+
+def write_verified(path, value):
+    path.write_text(str(value))
+    if int(path.read_text()) != value:
+        raise RuntimeError(f'Firmware did not retain {path.name}={value}')
+
+
+@contextlib.contextmanager
+def lock(blocking=True):
+    with open(LOCK, 'a') as stream:
+        fcntl.flock(stream, fcntl.LOCK_EX | (0 if blocking else fcntl.LOCK_NB))
+        yield
+
+
+def restore_peak():
+    # Preserve any tighter limit imposed by firmware, including on battery.
+    if int(PEAK.read_text()) > STOCK_PEAK:
+        write_verified(PEAK, STOCK_PEAK)
+
+
+def watch():
+    hot = False
+    previous = None
+    try:
+        while True:
+            try:
+                with lock(blocking=False):
+                    temp = temperature()
+                    hot = temp >= 95 or (hot and temp > 85)
+                    performance = Path('/sys/firmware/acpi/platform_profile').read_text().strip() == 'performance'
+                    wanted = DAILY_PEAK if ac_online() and performance and not hot else min(STOCK_PEAK, int(PEAK.read_text()))
+                    if int(PEAK.read_text()) != wanted:
+                        write_verified(PEAK, wanted)
+                    state = (wanted, hot)
+                    if state != previous:
+                        print(f'PL4={wanted / 1e6:g} W; CPU={temp:g} C; thermal fallback={hot}', flush=True)
+                        previous = state
+            except BlockingIOError:
+                pass  # A bounded boost owns the policy lock and monitors its own temperature.
+            time.sleep(2)
+    finally:
+        with lock():
+            restore_peak()
+
+
+def fan(mode, rpm=None):
+    subprocess.run([str(FAN), mode] + ([str(rpm)] if rpm is not None else []),
+                   check=True, timeout=8, stdout=subprocess.DEVNULL)
+
+
+def boost(seconds):
+    with lock():
+        if not ac_online():
+            raise RuntimeError('Boost requires AC power')
+        if int(Path('/sys/class/power_supply/BAT0/capacity').read_text()) < 50:
+            raise RuntimeError('Boost requires at least 50% battery; it supplements the 65 W adapter')
+        if temperature() >= 85:
+            raise RuntimeError('Let the CPU cool below 85 C before starting boost')
+        limits = [(POWERCAP / zone / f'constraint_{index}_power_limit_uw', value)
+                  for zone, index, value in [
+                      ('intel-rapl:0', 0, 75_000_000), ('intel-rapl:0', 1, 80_000_000),
+                      ('intel-rapl-mmio:0', 0, 75_000_000), ('intel-rapl-mmio:0', 1, 80_000_000),
+                      ('intel-rapl:1', 0, 90_000_000), ('intel-rapl:1', 1, 95_000_000),
+                      ('intel-rapl:0', 2, 135_000_000)]]
+        original = {}
+        try:
+            previous_fan = json.loads(Path('/run/power-a2z/fan-control.json').read_text())
+        except (OSError, ValueError):
+            previous_fan = {'mode': 'auto'}
+        print('Preparing maximum fan cooling; boost can draw about 30 W from the battery on AC.', flush=True)
+        try:
+            fan('max')
+            for _ in range(12):
+                time.sleep(1)
+                if not ac_online() or temperature() >= 98:
+                    raise RuntimeError('AC disconnected or CPU reached 98 C')
+            # Capture immediately before writing: thermald can legitimately
+            # adjust MMIO limits during fan preparation.
+            original = {path: int(path.read_text()) for path, _ in limits}
+            for path, value in limits:
+                write_verified(path, value)
+            print(f'Boost ready for up to {seconds} seconds; stops at 98 C, AC disconnect, or battery below 50%.', flush=True)
+            deadline = time.monotonic() + seconds
+            while time.monotonic() < deadline:
+                if not ac_online() or temperature() >= 98:
+                    print('Boost ended: AC disconnected or CPU reached 98 C.', flush=True)
+                    break
+                if int(Path('/sys/class/power_supply/BAT0/capacity').read_text()) < 50:
+                    print('Boost ended: battery below 50%.', flush=True)
+                    break
+                time.sleep(.5)
+        finally:
+            # Attempt every restore even when one interface fails.
+            errors = []
+            for path, value in reversed(list(original.items())):
+                try:
+                    if not ac_online():
+                        value = min(value, int(path.read_text()))
+                        if path == PEAK:
+                            value = min(value, STOCK_PEAK)
+                    write_verified(path, value)
+                except OSError as error:
+                    errors.append(str(error))
+                except RuntimeError as error:
+                    errors.append(str(error))
+            try:
+                fan('manual', previous_fan['rpm']) if previous_fan.get('mode') == 'manual' else fan('auto')
+            except (OSError, subprocess.SubprocessError) as error:
+                errors.append(str(error))
+            if errors:
+                raise RuntimeError('Restore errors: ' + '; '.join(errors))
+            print('Boost finished; previous power limits and fan setting restored.', flush=True)
+
+
+def interrupted(*_):
+    raise KeyboardInterrupt
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('mode', choices=('status', 'watch', 'stock', 'boost'))
+    parser.add_argument('--seconds', type=int, default=60)
+    args = parser.parse_args()
+    if not 1 <= args.seconds <= 120:
+        parser.error('--seconds must be 1–120')
+    validate()
+    signal.signal(signal.SIGTERM, interrupted)
+    if args.mode == 'watch':
+        watch()
+    elif args.mode == 'boost':
+        boost(args.seconds)
+    elif args.mode == 'stock':
+        with lock():
+            restore_peak()
+    else:
+        limits = {str(f.relative_to(POWERCAP)): int(f.read_text()) / 1e6
+                  for z in ('intel-rapl:0', 'intel-rapl-mmio:0', 'intel-rapl:1')
+                  for f in (POWERCAP / z).glob('constraint_*_power_limit_uw')}
+        print(json.dumps({'ac_online': ac_online(), 'max_cpu_c': temperature(), 'limits_w': limits}, indent=2))
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        pass
+    except (OSError, RuntimeError, subprocess.SubprocessError) as error:
+        raise SystemExit(str(error))

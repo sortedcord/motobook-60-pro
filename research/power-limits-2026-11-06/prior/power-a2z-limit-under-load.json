@@ -1,0 +1,50 @@
+[
+  {
+    "seconds": 2,
+    "package_w": 30.35,
+    "perf_flags": "0x1d021100",
+    "electrical_other": true,
+    "current_limit": true,
+    "thermal": false
+  },
+  {
+    "seconds": 4,
+    "package_w": 27.89,
+    "perf_flags": "0x1d021100",
+    "electrical_other": true,
+    "current_limit": true,
+    "thermal": false
+  },
+  {
+    "seconds": 6,
+    "package_w": 28.45,
+    "perf_flags": "0x1d021100",
+    "electrical_other": true,
+    "current_limit": true,
+    "thermal": false
+  },
+  {
+    "seconds": 8,
+    "package_w": 27.74,
+    "perf_flags": "0x1d021100",
+    "electrical_other": true,
+    "current_limit": true,
+    "thermal": false
+  },
+  {
+    "seconds": 10,
+    "package_w": 30.08,
+    "perf_flags": "0x1d021100",
+    "electrical_other": true,
+    "current_limit": true,
+    "thermal": false
+  },
+  {
+    "seconds": 12,
+    "package_w": 31.09,
+    "perf_flags": "0x1d021100",
+    "electrical_other": true,
+    "current_limit": true,
+    "thermal": false
+  }
+]

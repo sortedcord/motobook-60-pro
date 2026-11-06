@@ -1,0 +1,18 @@
+Preparing maximum fan cooling; boost can draw about 30 W from the battery on AC.
+Boost ready for up to 15 seconds; stops at 98 C, AC disconnect, or battery below 50%.
+Boost finished; previous power limits and fan setting restored.
+
+{
+  "balanced_pl4_w": 61.0,
+  "performance_pl4_w": 100.0,
+  "service_stop_pl4_w": 61.0,
+  "boost_exit_code": 0,
+  "after_boost_pl4_w": 100.0,
+  "fan_after_boost": "auto",
+  "thermald_active": "active"
+}
+Traceback (most recent call last):
+  File "/tmp/power-a2z-verify-installed-policy.py", line 31, in <module>
+    for i,value in enumerate(vals):assert int((Path('/sys/class/powercap')/z/f'constraint_{i}_power_limit_uw').read_text())==value,(z,i)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('intel-rapl-mmio:0', 0)

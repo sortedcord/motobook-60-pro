@@ -1,0 +1,801 @@
+{
+  "stage": "raised-peak-cap-125w",
+  "started": "2026-11-06T09:32:27.281140+05:30",
+  "limits_before": {
+    "intel-rapl:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "125000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    },
+    "intel-rapl:1": {
+      "constraint_1_time_window_us": "976",
+      "constraint_1_power_limit_uw": "95000000",
+      "constraint_0_time_window_us": "9994240",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "90000000",
+      "constraint_0_name": "long_term"
+    },
+    "intel-rapl-mmio:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "125000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    }
+  },
+  "workload": "matrix",
+  "rows": [
+    {
+      "seconds": 0.5,
+      "watts": {
+        "intel-rapl:0": 63.58,
+        "intel-rapl:1": 82.25,
+        "intel-rapl-mmio:0": 63.58
+      },
+      "max_cpu_c": 76.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88233800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88273800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x881d3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88333800"
+        }
+      },
+      "battery_status": "Not charging",
+      "battery_power_w": 0.0,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 1.0,
+      "watts": {
+        "intel-rapl:0": 66.21,
+        "intel-rapl:1": 85.02,
+        "intel-rapl-mmio:0": 66.21
+      },
+      "max_cpu_c": 76.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88323800"
+        }
+      },
+      "battery_status": "Not charging",
+      "battery_power_w": 0.0,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 1.5,
+      "watts": {
+        "intel-rapl:0": 66.09,
+        "intel-rapl:1": 85.1,
+        "intel-rapl-mmio:0": 66.09
+      },
+      "max_cpu_c": 80.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88313800"
+        }
+      },
+      "battery_status": "Not charging",
+      "battery_power_w": 0.0,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 2.01,
+      "watts": {
+        "intel-rapl:0": 63.06,
+        "intel-rapl:1": 81.65,
+        "intel-rapl-mmio:0": 63.06
+      },
+      "max_cpu_c": 80.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88273800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88313800"
+        }
+      },
+      "battery_status": "Not charging",
+      "battery_power_w": 0.0,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 2.51,
+      "watts": {
+        "intel-rapl:0": 65.16,
+        "intel-rapl:1": 84.21,
+        "intel-rapl-mmio:0": 65.16
+      },
+      "max_cpu_c": 80.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88253800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88313800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 9.906,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 3.01,
+      "watts": {
+        "intel-rapl:0": 65.85,
+        "intel-rapl:1": 84.7,
+        "intel-rapl-mmio:0": 65.85
+      },
+      "max_cpu_c": 80.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x881d3800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88233800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882f3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 9.906,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 3.51,
+      "watts": {
+        "intel-rapl:0": 66.2,
+        "intel-rapl:1": 85.21,
+        "intel-rapl-mmio:0": 66.2
+      },
+      "max_cpu_c": 82.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88233800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882e3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 24.345,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 4.02,
+      "watts": {
+        "intel-rapl:0": 66.12,
+        "intel-rapl:1": 84.01,
+        "intel-rapl-mmio:0": 66.12
+      },
+      "max_cpu_c": 82.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882e3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 24.345,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 4.52,
+      "watts": {
+        "intel-rapl:0": 66.27,
+        "intel-rapl:1": 85.3,
+        "intel-rapl-mmio:0": 66.27
+      },
+      "max_cpu_c": 84.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88153800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882d3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 23.32,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 5.02,
+      "watts": {
+        "intel-rapl:0": 65.08,
+        "intel-rapl:1": 83.95,
+        "intel-rapl-mmio:0": 65.08
+      },
+      "max_cpu_c": 84.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88233800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882d3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 23.32,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 5.53,
+      "watts": {
+        "intel-rapl:0": 64.91,
+        "intel-rapl:1": 83.82,
+        "intel-rapl-mmio:0": 64.91
+      },
+      "max_cpu_c": 85.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88233800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88153800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882c3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 24.811,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 6.03,
+      "watts": {
+        "intel-rapl:0": 66.27,
+        "intel-rapl:1": 85.23,
+        "intel-rapl-mmio:0": 66.27
+      },
+      "max_cpu_c": 85.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88153800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882c3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 24.811,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 6.53,
+      "watts": {
+        "intel-rapl:0": 66.54,
+        "intel-rapl:1": 86.0,
+        "intel-rapl-mmio:0": 66.54
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882b3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 24.543,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 7.03,
+      "watts": {
+        "intel-rapl:0": 66.12,
+        "intel-rapl:1": 85.16,
+        "intel-rapl-mmio:0": 66.12
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x88213800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882a3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 24.543,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 7.53,
+      "watts": {
+        "intel-rapl:0": 66.59,
+        "intel-rapl:1": 85.99,
+        "intel-rapl-mmio:0": 66.59
+      },
+      "max_cpu_c": 85.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88153800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882b3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 23.742,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 8.04,
+      "watts": {
+        "intel-rapl:0": 64.03,
+        "intel-rapl:1": 83.09,
+        "intel-rapl-mmio:0": 64.21
+      },
+      "max_cpu_c": 85.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88153800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x882a3800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 23.742,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 8.54,
+      "watts": {
+        "intel-rapl:0": 64.35,
+        "intel-rapl:1": 83.48,
+        "intel-rapl-mmio:0": 64.17
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88293800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 25.502,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 9.04,
+      "watts": {
+        "intel-rapl:0": 66.91,
+        "intel-rapl:1": 85.94,
+        "intel-rapl-mmio:0": 66.91
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881d3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88293800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 25.502,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 9.55,
+      "watts": {
+        "intel-rapl:0": 65.62,
+        "intel-rapl:1": 85.75,
+        "intel-rapl-mmio:0": 66.2
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88293800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 25.266,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 10.05,
+      "watts": {
+        "intel-rapl:0": 66.55,
+        "intel-rapl:1": 85.05,
+        "intel-rapl-mmio:0": 65.97
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88293800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 25.266,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 10.55,
+      "watts": {
+        "intel-rapl:0": 66.22,
+        "intel-rapl:1": 85.85,
+        "intel-rapl-mmio:0": 66.22
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88283800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 23.289,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 11.05,
+      "watts": {
+        "intel-rapl:0": 65.66,
+        "intel-rapl:1": 85.0,
+        "intel-rapl-mmio:0": 65.66
+      },
+      "max_cpu_c": 86.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88193800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881d3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88293800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 23.289,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 11.56,
+      "watts": {
+        "intel-rapl:0": 63.95,
+        "intel-rapl:1": 83.17,
+        "intel-rapl-mmio:0": 63.95
+      },
+      "max_cpu_c": 88.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x88173800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881f3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88283800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 25.347,
+      "cpu0_max_khz": 4900000
+    },
+    {
+      "seconds": 12.06,
+      "watts": {
+        "intel-rapl:0": 65.06,
+        "intel-rapl:1": 84.7,
+        "intel-rapl-mmio:0": 65.06
+      },
+      "max_cpu_c": 88.0,
+      "flags": {
+        "0": {
+          "perf": "0x1d021100",
+          "therm": "0x881b3800"
+        },
+        "1": {
+          "perf": "0x1d021100",
+          "therm": "0x881d3800"
+        },
+        "4": {
+          "perf": "0x1d021100",
+          "therm": "0x88133800"
+        },
+        "12": {
+          "perf": "0x1d021100",
+          "therm": "0x88273800"
+        }
+      },
+      "battery_status": "Discharging",
+      "battery_power_w": 25.347,
+      "cpu0_max_khz": 4900000
+    }
+  ],
+  "limits_after": {
+    "intel-rapl:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "125000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    },
+    "intel-rapl:1": {
+      "constraint_1_time_window_us": "976",
+      "constraint_1_power_limit_uw": "95000000",
+      "constraint_0_time_window_us": "9994240",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "90000000",
+      "constraint_0_name": "long_term"
+    },
+    "intel-rapl-mmio:0": {
+      "constraint_1_max_power_uw": "0",
+      "constraint_2_power_limit_uw": "125000000",
+      "constraint_1_time_window_us": "1952",
+      "constraint_2_max_power_uw": "0",
+      "constraint_2_name": "peak_power",
+      "constraint_1_power_limit_uw": "80000000",
+      "constraint_0_time_window_us": "55967744",
+      "constraint_1_name": "short_term",
+      "constraint_0_power_limit_uw": "75000000",
+      "constraint_0_name": "long_term",
+      "constraint_0_max_power_uw": "28000000"
+    }
+  },
+  "peak_half_second_w": 66.91,
+  "mean_w": 65.52
+}

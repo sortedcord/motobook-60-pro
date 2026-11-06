@@ -1,0 +1,36 @@
+Preparing maximum fan cooling; boost can draw about 30 W from the battery on AC.
+Boost ready for up to 15 seconds; stops at 98 C, AC disconnect, or battery below 50%.
+Boost finished; previous power limits and fan setting restored.
+
+{
+  "balanced_pl4_w": 61.0,
+  "performance_pl4_w": 100.0,
+  "service_stop_pl4_w": 61.0,
+  "boost_exit_code": 0,
+  "after_boost_pl4_w": 100.0,
+  "fan_after_boost": "manual",
+  "thermald_active": "active",
+  "limits_before_boost": {
+    "/sys/class/powercap/intel-rapl:0/constraint_2_power_limit_uw": 100000000,
+    "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 80000000,
+    "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 50000000,
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 100000000,
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 65000000,
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 47500000,
+    "/sys/class/powercap/intel-rapl:1/constraint_1_power_limit_uw": 58000000,
+    "/sys/class/powercap/intel-rapl:1/constraint_0_power_limit_uw": 56000000
+  },
+  "limits_after_boost": {
+    "/sys/class/powercap/intel-rapl:0/constraint_2_power_limit_uw": 100000000,
+    "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 80000000,
+    "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 50000000,
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 100000000,
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 65000000,
+    "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 55000000,
+    "/sys/class/powercap/intel-rapl:1/constraint_1_power_limit_uw": 58000000,
+    "/sys/class/powercap/intel-rapl:1/constraint_0_power_limit_uw": 56000000
+  },
+  "mmio_pl1_dynamic": true,
+  "nonexperimental_limits_verified": true,
+  "status": "passed; MMIO PL1 remains managed by adaptive thermald"
+}

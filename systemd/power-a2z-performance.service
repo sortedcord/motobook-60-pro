@@ -1,0 +1,12 @@
+[Unit]
+Description=Bounded Motobook AC performance power policy
+After=thermald.service power-profiles-daemon.service
+
+[Service]
+ExecStart=/usr/local/sbin/motobook-power-control watch
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

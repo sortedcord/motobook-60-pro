@@ -1,0 +1,10 @@
+[Unit]
+Description=Forward local HTTP requests to the power-a2z dashboard
+
+[Service]
+ExecStart=/usr/lib/systemd/systemd-socket-proxyd --exit-idle-time=5min 127.0.0.1:8765
+DynamicUser=yes
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict

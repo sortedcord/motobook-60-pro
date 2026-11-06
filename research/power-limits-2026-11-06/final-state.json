@@ -1,0 +1,90 @@
+{
+  "recorded": "2026-11-06T09:51:46.752662+05:30",
+  "power_control": {
+    "ac_online": true,
+    "max_cpu_c": 38.0,
+    "limits_w": {
+      "intel-rapl:0/constraint_2_power_limit_uw": 100.0,
+      "intel-rapl:0/constraint_1_power_limit_uw": 80.0,
+      "intel-rapl:0/constraint_0_power_limit_uw": 50.0,
+      "intel-rapl-mmio:0/constraint_2_power_limit_uw": 100.0,
+      "intel-rapl-mmio:0/constraint_1_power_limit_uw": 65.0,
+      "intel-rapl-mmio:0/constraint_0_power_limit_uw": 55.0,
+      "intel-rapl:1/constraint_1_power_limit_uw": 58.0,
+      "intel-rapl:1/constraint_0_power_limit_uw": 56.0
+    }
+  },
+  "fan": {
+    "mode": "manual",
+    "rpm": 5400,
+    "timestamp": "2026-11-06T04:20:32.520005+00:00"
+  },
+  "fan_actual": "CPU fan: 4,391 RPM",
+  "thermald": "active",
+  "performance_service": "active",
+  "performance_service_enabled": "enabled",
+  "cpu_policies": {
+    "policy11": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy8": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy6": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy4": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy2": {
+      "scaling_max_freq": "4900000",
+      "energy_performance_preference": "performance"
+    },
+    "policy0": {
+      "scaling_max_freq": "4900000",
+      "energy_performance_preference": "performance"
+    },
+    "policy12": {
+      "scaling_max_freq": "2500000",
+      "energy_performance_preference": "performance"
+    },
+    "policy9": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy10": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy7": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy5": {
+      "scaling_max_freq": "4400000",
+      "energy_performance_preference": "performance"
+    },
+    "policy3": {
+      "scaling_max_freq": "4900000",
+      "energy_performance_preference": "performance"
+    },
+    "policy1": {
+      "scaling_max_freq": "4900000",
+      "energy_performance_preference": "performance"
+    },
+    "policy13": {
+      "scaling_max_freq": "2500000",
+      "energy_performance_preference": "performance"
+    }
+  },
+  "cpu_pl2_time_windows_us": {
+    "intel-rapl:0": "1952",
+    "intel-rapl-mmio:0": "1952"
+  },
+  "services": "# /etc/systemd/system/power-a2z-performance.service\n[Unit]\nDescription=Bounded Motobook AC performance power policy\nAfter=thermald.service power-profiles-daemon.service\n\n[Service]\nExecStart=/usr/local/sbin/motobook-power-control watch\nRestart=on-failure\nRestartSec=5\nTimeoutStopSec=10\n\n[Install]\nWantedBy=multi-user.target\n\n# /usr/lib/systemd/system/thermald.service\n[Unit]\nDescription=Thermal Daemon Service\nConditionVirtualization=no\n\n[Service]\nType=dbus\nSuccessExitStatus=2\nBusName=org.freedesktop.thermald\nExecStart=/usr/bin/thermald --systemd --dbus-enable --adaptive\nRestart=on-failure\n\n[Install]\nWantedBy=multi-user.target\nAlias=dbus-org.freedesktop.thermald.service\n\n",
+  "remaining_stress_workers": []
+}

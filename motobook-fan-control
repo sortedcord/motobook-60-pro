@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+"""Set a bounded fan RPM target or restore automatic control on MOTOROLA 83NY."""
+import argparse
+import fcntl
+import datetime as dt
+import json
+import tempfile
+import os
+from pathlib import Path
+import re
+import struct
+import subprocess
+import sys
+
+
+def query(request):
+    interface = Path('/proc/acpi/call')
+    interface.write_text(request)
+    response = interface.read_text().rstrip('\x00').strip()
+    if response.startswith('Error'):
+        raise RuntimeError(response)
+    return response
+
+
+def buffer(response):
+    if not response.startswith('{'):
+        raise RuntimeError('Expected firmware buffer: ' + response)
+    return bytes(int(value, 16) for value in re.findall(r'0x([0-9a-fA-F]{1,2})\b', response))
+
+
+def publish_state(state):
+    destination = Path('/run/power-a2z/fan-control.json')
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', dir=destination.parent, delete=False) as stream:
+            temporary = Path(stream.name)
+            json.dump(state, stream)
+            os.fchmod(stream.fileno(), 0o644)
+        os.replace(temporary, destination)
+    finally:
+        if temporary:
+            temporary.unlink(missing_ok=True)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('mode', choices=['max', 'auto', 'manual'])
+    parser.add_argument('rpm', type=int, nargs='?')
+    args = parser.parse_args()
+    if args.mode == 'manual':
+        if args.rpm is None or not 1500 <= args.rpm <= 5400 or args.rpm % 100:
+            parser.error('Manual RPM must be 1500–5400 in steps of 100')
+    elif args.rpm is not None:
+        parser.error('RPM is accepted only in manual mode')
+    if os.geteuid() != 0:
+        parser.error('Run with sudo')
+    identity = tuple(Path('/sys/class/dmi/id', key).read_text().strip()
+                     for key in ['sys_vendor', 'product_name', 'bios_version'])
+    if identity != ('MOTOROLA', '83NY', 'SFCN07WW'):
+        parser.error('Verified only for MOTOROLA 83NY, BIOS SFCN07WW')
+    subprocess.run(['/usr/bin/modprobe', 'acpi_call'], check=True, timeout=4)
+    with open('/run/lock/motobook-fan-speed.lock', 'w') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        reference = buffer(query(r'\_SB.GZFD.WQC3 0'))
+        if len(reference) != 16 or struct.unpack('<IIII', reference) != (1, 1, 5400, 1500):
+            raise RuntimeError('Unexpected fan reference data; no changes applied')
+        target = args.rpm if args.mode == 'manual' else 5400 if args.mode == 'max' else 0
+        payload = struct.pack('<II', 0x04030001, target).hex()
+        # WMI SetFeatureValue, CPU fan RPM. Zero returns control to the firmware.
+        result = query(r'\_SB.GZFD.WMAE 0 18 b' + payload)
+        if int(result, 0) not in (0, 1):
+            raise RuntimeError('Firmware rejected request: ' + result)
+        publish_state({'mode': 'manual' if target else 'auto', 'rpm': target if target else None,
+                       'timestamp': dt.datetime.now(dt.timezone.utc).isoformat()})
+        print(f'Requested {target} RPM' if target else 'Requested firmware automatic fan control')
+        print('Verify the actual speed with sudo ./motobook-fan-speed')
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as error:
+        sys.exit(str(error))

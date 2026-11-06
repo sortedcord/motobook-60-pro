@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")"
+install -m 0755 motobook-power-control /usr/local/sbin/motobook-power-control
+install -m 0644 systemd/power-a2z-performance.service /etc/systemd/system/power-a2z-performance.service
+systemctl daemon-reload
+systemctl enable --now power-a2z-performance.service

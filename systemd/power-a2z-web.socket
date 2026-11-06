@@ -1,0 +1,9 @@
+[Unit]
+Description=Local HTTP address for the power-a2z dashboard
+
+[Socket]
+ListenStream=127.0.0.1:80
+NoDelay=true
+
+[Install]
+WantedBy=sockets.target

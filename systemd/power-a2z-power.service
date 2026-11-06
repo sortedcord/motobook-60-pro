@@ -1,0 +1,13 @@
+[Unit]
+Description=Sample CPU package and platform PSYS energy for power-a2z
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/lib/power-a2z/power_sampler.py
+RuntimeDirectory=power-a2z
+RuntimeDirectoryMode=0755
+RuntimeDirectoryPreserve=yes
+ProtectHome=yes
+ProtectSystem=strict
+NoNewPrivileges=yes
+TimeoutStartSec=5

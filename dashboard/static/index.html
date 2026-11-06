@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a16">
+  <meta name="description" content="Live power, battery health, and system telemetry from your local power a2z collector.">
+  <title>Power a2z · Energy overview</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23162b26'/%3E%3Cpath d='M23 6 11 23h8l-2 11 13-18h-9z' fill='%23b6edb6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="6" width="18" height="12" rx="3"/><path d="M23 10v4M6 10v4m4-4v4m4-4v4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M9 14.5V5a3 3 0 0 1 6 0v9.5a5 5 0 1 1-6 0Z"/><path d="M12 8v10"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 8a9 9 0 1 0 1 8M20 3v6h-6"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M8 2v5m8-5v5M5 7h14v3a7 7 0 0 1-14 0Zm7 10v5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"/><rect x="9" y="9" width="6" height="6" rx="1"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to dashboard</a>
+  <aside class="sidebar">
+    <a href="/" class="brand" aria-label="Power a2z home"><span class="brand-mark"><svg><use href="#i-bolt"/></svg></span><span>power<span class="brand-light">a2z</span><small>ENERGY INTELLIGENCE</small></span></a>
+    <div class="sidebar-section">WORKSPACE</div>
+    <nav aria-label="Dashboard navigation">
+      <a class="nav-item active" href="#main" aria-current="page"><svg><use href="#i-grid"/></svg>Overview<span class="nav-dot"></span></a>
+      <a class="nav-item" href="#power-section"><svg><use href="#i-bolt"/></svg>Power history</a>
+      <a class="nav-item" href="#battery-section"><svg><use href="#i-battery"/></svg>Battery health</a>
+      <a class="nav-item" href="#system-power-section"><svg><use href="#i-bolt"/></svg>System power</a>
+      <a class="nav-item" href="#sessions-section"><svg><use href="#i-clock"/></svg>Sessions</a>
+      <a class="nav-item" href="#thermal-section"><svg><use href="#i-thermo"/></svg>Fans & thermals</a>
+      <a class="nav-item" href="#activity-section"><svg><use href="#i-cpu"/></svg>System activity</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="local-card"><span class="local-symbol"><svg><use href="#i-plug"/></svg></span><strong>Local by design</strong><p>Real readings from your machine.<br>Updated every 10 seconds.</p><span class="local-pill"><span></span> ON-DEVICE TELEMETRY</span></div>
+      <button id="about-button" class="about-button"><svg><use href="#i-info"/></svg>About this dashboard<svg class="about-arrow"><use href="#i-arrow"/></svg></button>
+      <div class="sidebar-version">power_a2z <span>/ v1.0</span></div>
+    </div>
+  </aside>
+  <main id="main">
+    <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong>Energy overview</strong></div><div class="connection"><span id="connection-dot" class="status-dot"></span><span id="connection-label">Connecting</span></div></header>
+    <div class="page-content">
+      <section class="page-heading"><div><div class="eyebrow">THE BIG PICTURE</div><h1>Energy overview<span>.</span></h1><p>A little clarity on what keeps your system running.</p></div><a id="export-button" class="button export-button" href="/api/export.csv?range=6h" download="power-a2z.csv"><svg><use href="#i-download"/></svg>Export CSV</a></section>
+      <div class="toolbar"><div class="filters"><label class="sr-only" for="date-select">Recording date</label><select id="date-select"><option value="latest">Latest recordings</option></select><div class="range-switch" role="group" aria-label="Time range"><button data-range="1h" aria-pressed="false">1 hour</button><button data-range="6h" class="selected" aria-pressed="true">6 hours</button><button data-range="24h" aria-pressed="false">24 hours</button><button data-range="all" aria-pressed="false">All data</button></div></div><div class="live-controls"><button id="live-button" class="live-button" aria-pressed="true"><span class="status-dot"></span><span>Auto-refresh on</span></button><button id="refresh-button" class="icon-button" aria-label="Refresh data" title="Refresh data"><svg><use href="#i-refresh"/></svg></button></div></div>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <section class="metric-grid" aria-label="Latest readings">
+        <article class="metric-card"><div class="metric-top"><span>Battery level</span><svg><use href="#i-battery"/></svg></div><div class="metric-value" id="battery-value">—<span>%</span></div><div class="metric-bottom"><span class="tiny-dot green"></span><span id="battery-detail">Waiting for readings</span></div><div class="mini-track"><span id="battery-track"></span></div></article>
+        <article class="metric-card"><div class="metric-top"><span>Battery power</span><svg><use href="#i-bolt"/></svg></div><div class="metric-value" id="power-value">—<span>W</span></div><div class="metric-bottom"><span id="power-detail">Measured at the battery</span></div><canvas id="power-spark" class="sparkline" aria-hidden="true"></canvas></article>
+        <article class="metric-card"><div class="metric-top"><span id="runtime-title">Estimated remaining</span><svg><use href="#i-clock"/></svg></div><div class="metric-value runtime-value" id="runtime-value">—</div><div class="metric-bottom"><span id="runtime-detail">Based on current power draw</span></div></article>
+        <article class="metric-card"><div class="metric-top"><span>CPU temperature</span><svg><use href="#i-thermo"/></svg></div><div class="metric-value" id="temperature-value">—<span>°C</span></div><div class="metric-bottom"><span class="tiny-dot" id="temperature-dot"></span><span id="temperature-detail">Waiting for sensor</span></div></article>
+      </section>
+      <div class="primary-grid">
+        <section id="power-section" class="panel power-panel"><div class="panel-heading"><div><h2>Power & charge</h2><p>Battery power alongside remaining charge</p></div><span class="tag" id="window-tag">6-HOUR WINDOW</span></div><div class="chart-legends"><span><i class="legend-line green-line"></i>Battery power <b>W</b></span><span><i class="legend-line purple-line"></i>Charge level <b>%</b></span><span class="chart-date" id="chart-date">—</span></div><div class="chart-wrap"><canvas id="power-chart" tabindex="0" role="img" aria-label="Battery power and charge over time. Use left and right arrow keys to inspect readings."></canvas><div id="power-tooltip" class="chart-tooltip" hidden></div><div class="chart-empty" id="power-empty" hidden>No readings in this window.</div></div><div class="chart-summary"><div><span>Average power</span><strong id="average-power">—</strong></div><div><span>Peak power</span><strong id="peak-power">—</strong></div><div><span>Energy discharged</span><strong id="energy-used">—</strong></div><div><span>Samples</span><strong id="sample-count">—</strong></div></div></section>
+        <section id="battery-section" class="panel battery-panel"><div class="panel-heading"><div><h2>Battery health</h2><p id="battery-model">Battery information</p></div><svg class="muted-icon"><use href="#i-battery"/></svg></div><div class="health-visual"><svg class="health-ring" viewBox="0 0 180 180" aria-hidden="true"><circle class="ring-bg" cx="90" cy="90" r="73"/><circle id="health-arc" class="ring-value" cx="90" cy="90" r="73"/></svg><div class="health-label"><strong id="health-value">—<span>%</span></strong><span>design capacity</span></div></div><div class="health-status" id="health-status">Waiting for battery</div><dl class="battery-specs"><div><dt>Full charge capacity</dt><dd id="full-capacity">—</dd></div><div><dt>Design capacity</dt><dd id="design-capacity">—</dd></div><div><dt>Charge cycles</dt><dd id="cycle-count">—</dd></div><div><dt>Voltage / current</dt><dd id="voltage-current">—</dd></div></dl><p class="panel-note">Health compares full charge capacity to the manufacturer's design rating.</p></section>
+      </div>
+      <div class="secondary-grid">
+        <section id="activity-section" class="panel activity-panel"><div class="panel-heading"><div><h2>System activity</h2><p>See the context behind your power draw</p></div><svg class="muted-icon"><use href="#i-cpu"/></svg></div><div class="activity-tabs" role="group" aria-label="Activity metric"><button data-activity="cpu_pct" class="selected" aria-pressed="true">CPU <span id="cpu-current">—</span></button><button data-activity="memory_pct" aria-pressed="false">Memory <span id="memory-current">—</span></button><button data-activity="brightness_pct" aria-pressed="false">Brightness <span id="brightness-current">—</span></button></div><div class="chart-wrap activity-chart-wrap"><canvas id="activity-chart" tabindex="0" role="img" aria-label="System activity over time. Use left and right arrow keys to inspect readings."></canvas><div id="activity-tooltip" class="chart-tooltip" hidden></div><div class="chart-empty" id="activity-empty" hidden>No activity readings available.</div></div><div class="activity-foot"><span class="tiny-dot green"></span><span id="activity-caption">CPU utilization from consecutive collector samples</span></div></section>
+        <section class="panel events-panel"><div class="panel-heading"><div><h2>Power events</h2><p>Charging and power-source changes</p></div><span class="count-badge" id="event-count">0</span></div><div id="events" class="events-list"><div class="events-empty"><span class="empty-icon"><svg><use href="#i-plug"/></svg></span><strong>Waiting for readings</strong><p>Power-source changes will appear here.</p></div></div></section>
+      </div>
+      <section id="system-power-section" class="panel thermal-panel">
+        <div class="panel-heading"><div><h2>System power</h2><p>CPU package and platform PSYS power on battery or AC</p></div></div>
+        <div class="thermal-summary power-readings"><div><span>CPU package</span><strong id="cpu-package-value">—<span>W</span></strong><small>Includes the CPU package domains</small></div><div><span>Platform PSYS</span><strong id="psys-value">—<span>W</span></strong><small>Platform scope depends on hardware; includes CPU power</small></div></div>
+        <p class="sessions-note" id="system-power-detail">Waiting for power readings</p>
+        <p class="sessions-note">These readings overlap; do not add them together. PSYS is separate from battery charging power and wall-socket consumption.</p>
+        <div class="activity-tabs" role="group" aria-label="System power history metric"><button data-system-power="cpu_package_w" class="selected" aria-pressed="true">CPU package</button><button data-system-power="platform_psys_w" aria-pressed="false">Platform PSYS</button></div>
+        <div class="chart-wrap thermal-chart-wrap"><canvas id="system-power-chart" tabindex="0" role="img" aria-label="CPU package power over time"></canvas><div id="system-power-tooltip" class="chart-tooltip" hidden></div><div class="chart-empty" id="system-power-empty" hidden>No power readings available.</div></div>
+        <div class="activity-foot"><span id="system-power-caption">Average CPU package power between sampler readings</span></div>
+      </section>
+      <section id="thermal-section" class="panel thermal-panel">
+        <div class="panel-heading"><div><h2>Fans & thermals</h2><p>Cooling speed and temperatures across your system</p></div><svg class="muted-icon"><use href="#i-thermo"/></svg></div>
+        <form id="fan-control-form" class="fan-control-form">
+          <div class="fan-control-heading"><strong>Live fan control</strong><span id="fan-control-current">Reading current setting…</span></div>
+          <div class="fan-control-fields"><label>Control mode<select id="fan-control-mode"><option value="auto">Auto · firmware controlled</option><option value="manual">Manual · target RPM</option></select></label><button id="fan-control-apply" class="button" type="submit" disabled>Apply mode</button></div>
+          <fieldset id="fan-control-manual" hidden><legend>Manual fan speed</legend><div class="fan-rpm-inputs"><input id="fan-control-slider" type="range" min="1500" max="5400" step="100" value="3500" aria-label="Target fan speed"><label>Target RPM<input id="fan-control-rpm" type="number" min="1500" max="5400" step="100" value="3500"></label></div><small>1,500–5,400 RPM in steps of 100. Measured speed may differ from the requested target.</small></fieldset>
+          <p id="fan-control-status" role="status" aria-live="polite">Connecting to fan control…</p>
+        </form>
+        <div class="thermal-summary">
+          <div><span>Fan speed</span><strong id="fan-value">—<span>RPM</span></strong><small id="fan-detail">Waiting for fan sensor</small></div>
+          <div><span>CPU temperature</span><strong id="thermal-cpu-value">—<span>°C</span></strong><small>Hottest CPU package / core</small></div>
+          <div><span>Hottest sensor</span><strong id="hottest-value">—<span>°C</span></strong><small id="hottest-detail">Waiting for sensor</small></div>
+        </div>
+        <div class="activity-tabs" role="group" aria-label="Thermal history metric"><button data-thermal="cpu_temp_c" class="selected" aria-pressed="true">CPU temperature</button><button data-thermal="hottest_temp_c" aria-pressed="false">Hottest sensor</button><button data-thermal="fan_rpm" aria-pressed="false">Fan speed</button></div>
+        <div class="chart-wrap thermal-chart-wrap"><canvas id="thermal-chart" tabindex="0" role="img" aria-label="CPU temperature over time. Use left and right arrow keys to inspect readings."></canvas><div id="thermal-tooltip" class="chart-tooltip" hidden></div><div class="chart-empty" id="thermal-empty" hidden>No thermal readings available.</div></div>
+        <div class="activity-foot"><span class="tiny-dot green"></span><span id="thermal-caption">Hottest CPU package or core temperature in °C</span></div>
+        <details class="sensor-details" open><summary>Latest sensor readings</summary><div class="table-scroll"><table><caption class="sr-only">Latest temperatures and fan speeds with reported sensor limits</caption><thead><tr><th>Sensor</th><th>Source</th><th>Reading</th><th>High limit</th><th>Critical limit</th><th>Status</th></tr></thead><tbody id="sensor-rows"></tbody></table></div></details>
+      </section>
+      <section id="sessions-section" class="panel sessions-panel"><div class="panel-heading"><div><h2>Battery sessions</h2><p>Charging and discharging periods in the selected window</p></div></div><p class="sessions-note">Sessions are inferred from battery state and power-source changes. Matching readings across collection gaps are treated as one session; unrecorded time is excluded from measured usage. Gaps and recording boundaries can make a session partial. Backlight-on time is an estimate and may include time when the screen is asleep.</p><div id="sessions-list" class="sessions-list"><p>Waiting for readings</p></div></section>
+      <details class="panel data-details"><summary>Explore sample data <span>Latest 100 readings in this window</span></summary><div class="table-scroll"><table><caption class="sr-only">Collected power and battery measurements, newest first</caption><thead><tr><th>Time</th><th>Status</th><th>Charge</th><th>Power</th><th>Energy</th><th>CPU</th><th>CPU temp</th><th>Hottest temp</th><th>Fan speed</th><th>CPU package</th><th>Platform PSYS</th></tr></thead><tbody id="sample-rows"></tbody></table></div></details>
+      <footer class="page-footer"><span><span class="tiny-dot green"></span> Sourced from local collector logs</span><span id="updated-label">Waiting for first reading</span></footer>
+    </div>
+  </main>
+  <dialog id="about-dialog"><div class="dialog-heading"><h2>About power a2z</h2><button id="close-dialog" class="icon-button" aria-label="Close dialog">×</button></div><p>This dashboard reads your local <code>power_a2z/data/YYYY-MM-DD.jsonl</code> files. New complete samples appear automatically every 10 seconds.</p><p>Power, voltage, and energy are converted from the kernel's micro-units into watts, volts, and watt-hours. Battery power is the magnitude measured at the primary system battery, including during charging; it does not represent wall-socket consumption.</p><p>Runtime is a snapshot estimate from remaining energy and current power. Charging shows time to full. Energy discharged uses trapezoidal integration and excludes collection gaps longer than 60 seconds or three sampling intervals.</p><p>Time windows end at the latest recorded sample. Chart times use your browser's timezone. Missing measurements appear as a dash. Health can exceed 100% when a battery's full capacity is above its design rating.</p><p>Thermals include hwmon sensors and thermal zones. Sensor limits come from the hardware when available. Fan speed shows the fastest reported fan; zero RPM means stopped, while missing, failed, or stale readings appear as a dash.</p><p id="source-detail"></p><button id="dismiss-dialog" class="button dialog-done">Got it</button></dialog>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Requested 5400 RPM
+Verify the actual speed with sudo ./motobook-fan-speed
+CPU fan: 4,356 RPM
+{"seconds": 0.263, "cpu_w": 82.01, "psys_w": 104.01, "cpu_c": 78.0, "pl4_w": 160.0, "battery_status": "Not charging", "battery_w": 0.0, "perf_flags": "0x1d021100", "thermal_flags": "0x88233800"}
+{"seconds": 0.517, "cpu_w": 79.17, "psys_w": 100.83, "cpu_c": 78.0, "pl4_w": 160.0, "battery_status": "Not charging", "battery_w": 0.0, "perf_flags": "0x1d021100", "thermal_flags": "0x88233800"}
+{"seconds": 0.771, "cpu_w": 82.04, "psys_w": 104.79, "cpu_c": 78.0, "pl4_w": 160.0, "battery_status": "Not charging", "battery_w": 0.0, "perf_flags": "0x1d021100", "thermal_flags": "0x881f3800"}
+{"seconds": 1.023, "cpu_w": 85.39, "psys_w": 108.69, "cpu_c": 82.0, "pl4_w": 160.0, "battery_status": "Not charging", "battery_w": 0.0, "perf_flags": "0x1d021100", "thermal_flags": "0x88213800"}
+{"seconds": 1.275, "cpu_w": 84.68, "psys_w": 107.61, "cpu_c": 82.0, "pl4_w": 160.0, "battery_status": "Not charging", "battery_w": 0.0, "perf_flags": "0x1d021100", "thermal_flags": "0x881f3800"}
+{"seconds": 1.53, "cpu_w": 84.8, "psys_w": 107.76, "cpu_c": 82.0, "pl4_w": 160.0, "battery_status": "Not charging", "battery_w": 0.0, "perf_flags": "0x1d021100", "thermal_flags": "0x881d3800"}
+{"seconds": 1.781, "cpu_w": 85.13, "psys_w": 108.49, "cpu_c": 82.0, "pl4_w": 160.0, "battery_status": "Not charging", "battery_w": 0.0, "perf_flags": "0x1d021100", "thermal_flags": "0x881b3800"}
+{"seconds": 2.034, "cpu_w": 85.23, "psys_w": 108.92, "cpu_c": 84.0, "pl4_w": 160.0, "battery_status": "Discharging", "battery_w": 39.538, "perf_flags": "0x1d021100", "thermal_flags": "0x881d3800"}
+{"seconds": 2.29, "cpu_w": 84.7, "psys_w": 107.78, "cpu_c": 84.0, "pl4_w": 160.0, "battery_status": "Discharging", "battery_w": 39.538, "perf_flags": "0x1d021100", "thermal_flags": "0x881d3800"}
+{"seconds": 2.542, "cpu_w": 85.37, "psys_w": 108.77, "cpu_c": 84.0, "pl4_w": 160.0, "battery_status": "Discharging", "battery_w": 39.538, "perf_flags": "0x1d021100", "thermal_flags": "0x881d3800"}
+{"seconds": 2.793, "cpu_w": 84.92, "psys_w": 108.34, "cpu_c": 84.0, "pl4_w": 160.0, "battery_status": "Discharging", "battery_w": 39.538, "perf_flags": "0x1d021100", "thermal_flags": "0x88193800"}
+{"seconds": 3.047, "cpu_w": 84.93, "psys_w": 108.75, "cpu_c": 86.0, "pl4_w": 160.0, "battery_status": "Discharging", "battery_w": 48.306, "perf_flags": "0x1d021100", "thermal_flags": "0x881b3800"}
+PL4 ramp -> 180 W
+{"seconds": 3.301, "cpu_w": 96.15, "psys_w": 123.36, "cpu_c": 95.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 48.306, "perf_flags": "0x1d021100", "thermal_flags": "0x88132800"}
+{"seconds": 3.554, "cpu_w": 96.22, "psys_w": 123.3, "cpu_c": 95.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 48.306, "perf_flags": "0x1d021100", "thermal_flags": "0x88172800"}
+{"seconds": 3.807, "cpu_w": 94.46, "psys_w": 120.96, "cpu_c": 95.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 48.306, "perf_flags": "0x1d021100", "thermal_flags": "0x88153800"}
+{"seconds": 4.061, "cpu_w": 95.59, "psys_w": 122.76, "cpu_c": 95.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 50.421, "perf_flags": "0x1d021100", "thermal_flags": "0x88172800"}
+{"seconds": 4.315, "cpu_w": 94.69, "psys_w": 121.5, "cpu_c": 94.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 50.421, "perf_flags": "0x1d021100", "thermal_flags": "0x88153800"}
+{"seconds": 4.566, "cpu_w": 94.9, "psys_w": 121.78, "cpu_c": 94.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 50.421, "perf_flags": "0x1d021000", "thermal_flags": "0x88132800"}
+{"seconds": 4.819, "cpu_w": 96.12, "psys_w": 123.03, "cpu_c": 94.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 50.421, "perf_flags": "0x1d021000", "thermal_flags": "0x88152800"}
+{"seconds": 5.072, "cpu_w": 95.9, "psys_w": 122.91, "cpu_c": 96.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 62.884, "perf_flags": "0x1d021100", "thermal_flags": "0x88133800"}
+{"seconds": 5.325, "cpu_w": 95.7, "psys_w": 122.99, "cpu_c": 97.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 62.884, "perf_flags": "0x1d021100", "thermal_flags": "0x880f3800"}
+{"seconds": 5.576, "cpu_w": 96.19, "psys_w": 123.37, "cpu_c": 97.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 62.884, "perf_flags": "0x1d021100", "thermal_flags": "0x88112800"}
+{"seconds": 5.83, "cpu_w": 96.16, "psys_w": 121.17, "cpu_c": 97.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 62.884, "perf_flags": "0x1d021100", "thermal_flags": "0x88113800"}
+{"seconds": 6.081, "cpu_w": 94.83, "psys_w": 122.42, "cpu_c": 100.0, "pl4_w": 180.0, "battery_status": "Discharging", "battery_w": 62.654, "perf_flags": "0x1d021100", "thermal_flags": "0x88112800"}
+Stopping: 98 C temperature cutoff
+{"started": "2026-11-06T09:48:19.574392+05:30", "target_cpu_w": 100, "external_cooler_ready_confirmed": true, "cutoff_c": 98, "end_reason": "98 C temperature cutoff", "restore_errors": [], "all_workers_stopped": true, "peak_cpu_w": 96.22, "mean_cpu_w": 89.8, "duration_s": 6.081, "max_cpu_c": 100.0}

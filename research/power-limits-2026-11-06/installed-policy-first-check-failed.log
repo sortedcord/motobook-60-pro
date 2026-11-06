@@ -1,0 +1,13 @@
+Preparing maximum fan cooling; boost can draw about 30 W from the battery on AC.
+Restore errors: [Errno 2] No such file or directory: '/usr/local/sbin/motobook-fan-control'
+
+{
+  "balanced_pl4_w": 61.0,
+  "performance_pl4_w": 100.0,
+  "service_stop_pl4_w": 61.0
+}
+Traceback (most recent call last):
+  File "/tmp/power-a2z-verify-installed-policy.py", line 21, in <module>
+    assert booster.poll() is None,'Booster exited unexpectedly before test completion'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Booster exited unexpectedly before test completion
